@@ -8,6 +8,7 @@
 - [x] let user input target/winning number
 - [x] let user input amount of dice
 - [ ] let user input highest number on dice
+  - [ ] (refactor `dice[0].dieMaxValue` in `rollDie()` & `dieMaxNum` input field to be more universal (not just focused on 1st die))
 
 
 

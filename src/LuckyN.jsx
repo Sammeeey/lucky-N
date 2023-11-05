@@ -12,7 +12,7 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
 
     const rollDie = () => 
         setDice(prevDice => prevDice.map(die => (
-            {...die, rollResult: Math.floor(Math.random() * dieMaxValue + 1)}
+            {...die, rollResult: Math.floor(Math.random() * dice[0].dieMaxValue + 1)}
         )))
 
     const getResultSum = () => {
@@ -29,6 +29,9 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
         </div>
         <div>How many dice?
             <input type="number" name="dieAmount" id="dieAmount" placeholder="die amount" value={dice.length} onChange={(e) => setDice(newDice(+e.target.value))} />
+        </div>
+        <div>Maximum value on dice?
+            <input type="number" name="dieMaxNum" id="dieMaxNum" placeholder="die max num" value={dice[0].dieMaxValue} onChange={(e) => setDice(prevDice => prevDice.map(die => ({...die, dieMaxValue: +e.target.value})))} />
         </div>
         <div>resultSum: {resultSum}</div>
         <div>{resultSum === userWinningNum && 'Game Won!'}</div>
