@@ -2,12 +2,14 @@
 
 import Die from "./Die"
 
-function Dice({dieAmount=2, dieMaxValue=6, winningNum=10}) {
-    const dieArr = [...Array(dieAmount).keys()]
+function Dice({dice}) {
+    // console.log(dice)
 
     return (
         <>
-        {dieArr.map(die => <Die {...{dieMaxValue}} />)}
+        {dice.map((die, dieIdx) =>
+            <Die {...{dice, dieIdx}} />
+        )}
         </>
     )
 }

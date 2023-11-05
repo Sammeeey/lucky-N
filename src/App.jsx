@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <LuckyN />
+    <LuckyN dieAmount={3} dieMaxValue={4} winningNum={4} />
     </>
   )
 }
