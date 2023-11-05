@@ -8,7 +8,7 @@ function Dice({dice}) {
     return (
         <>
         {dice.map((die, dieIdx) =>
-            <Die {...{dice, dieIdx}} />
+            <Die key={dieIdx} {...{dice, dieIdx}} />
         )}
         </>
     )
