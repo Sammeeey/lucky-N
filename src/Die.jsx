@@ -1,10 +1,11 @@
 // import './Die.css'
 
-function Die() {
+function Die({dieMaxValue}) {
+    console.log(dieMaxValue)
 
     return (
         <>
-        Die
+        Die (max value={dieMaxValue})
         </>
     )
 }

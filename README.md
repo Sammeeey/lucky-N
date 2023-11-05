@@ -3,7 +3,7 @@
 
 ## ToDO
 - [ ] let user input amount of dice
-- [ ] (let user input max numbers of dice)
+- [ ] let user input highest number on dice
 - [ ] let user input target/winning number
 
 

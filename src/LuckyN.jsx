@@ -6,7 +6,7 @@ function LuckyN() {
 
     return (
         <>
-        <Dice dieAmount={3} winningNum={4} />
+        <Dice dieAmount={3} dieMaxValue={4} winningNum={4} />
         </>
     )
 }
