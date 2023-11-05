@@ -1,8 +1,9 @@
 # Lucky N Game
+- insipred by [Lucky7 in WebDev Bootcamp (paid)](https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/37806736#questions)
 
 ## ToDO
-- [ ] let user input number of dice
-- [ ] let user input max numbers of dice
+- [ ] let user input amount of dice
+- [ ] (let user input max numbers of dice)
 - [ ] let user input target/winning number
 
 
