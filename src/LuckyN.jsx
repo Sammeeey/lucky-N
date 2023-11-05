@@ -18,7 +18,6 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
     const getResultSum = () => {
         const rollSum = dice.reduce((sum, currentValue) => sum + currentValue.rollResult, 0)
         setResultSum(prevResultSum => prevResultSum = rollSum)
-        console.log('rollSum', rollSum)
     }
 
     useEffect(getResultSum, [dice, userWinningNum])
