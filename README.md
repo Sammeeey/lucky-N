@@ -2,9 +2,9 @@
 - insipred by [Lucky7 in WebDev Bootcamp (paid)](https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/37806736#questions)
 
 ## ToDO
-- [ ] implement rollDice feature
+- [x] implement rollDice feature
   - [x] show result of dice rolls in UI
-
+- [x] display win (if rolls sum up to winning number)
 - [ ] let user input amount of dice
 - [ ] let user input highest number on dice
 - [ ] let user input target/winning number
