@@ -5,9 +5,9 @@
 - [x] implement rollDice feature
   - [x] show result of dice rolls in UI
 - [x] display win (if rolls sum up to winning number)
-- [ ] let user input amount of dice
+- [x] let user input target/winning number
+- [x] let user input amount of dice
 - [ ] let user input highest number on dice
-- [ ] let user input target/winning number
 
 
 

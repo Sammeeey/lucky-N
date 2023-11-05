@@ -4,8 +4,9 @@ import { useEffect, useState } from "react"
 import Dice from "./Dice"
 
 function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
-    const dieArr = [...Array(dieAmount).keys()]
-    const [dice, setDice] = useState(dieArr.map(die => ({rollResult:null, dieMaxValue:dieMaxValue})))
+    const newDice = (amount) => [...Array(amount).keys()].map(die => ({rollResult:null, dieMaxValue:dieMaxValue}))
+
+    const [dice, setDice] = useState(newDice(dieAmount))
     const [resultSum, setResultSum] = useState(null)
     const [userWinningNum, setUserWinningNum] = useState(winningNum)
 
@@ -26,6 +27,9 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
         <>
         <div>Which sum of roll results should win?
             <input type="number" name="winningNum" id="winningNum" placeholder="winning number" value={userWinningNum} onChange={(e) => setUserWinningNum(+e.target.value)} />
+        </div>
+        <div>How many dice?
+            <input type="number" name="dieAmount" id="dieAmount" placeholder="die amount" value={dice.length} onChange={(e) => setDice(newDice(+e.target.value))} />
         </div>
         <div>resultSum: {resultSum}</div>
         <div>{resultSum === userWinningNum && 'Game Won!'}</div>
