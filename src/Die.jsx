@@ -2,11 +2,11 @@
 
 function Die() {
 
-  return (
-    <>
-    Die
-    </>
-  )
+    return (
+        <>
+        Die
+        </>
+    )
 }
 
 export default Die

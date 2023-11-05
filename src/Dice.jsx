@@ -2,13 +2,14 @@
 
 import Die from "./Die"
 
-function Dice() {
+function Dice({dieAmount, winningNum}) {
+    const dieArr = [...Array(dieAmount).keys()]
 
-  return (
-    <>
-    <Die />
-    </>
-  )
+    return (
+        <>
+        {dieArr.map(die => <Die />)}
+        </>
+    )
 }
 
 export default Dice
