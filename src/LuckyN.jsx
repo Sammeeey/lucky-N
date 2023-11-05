@@ -7,6 +7,7 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
     const dieArr = [...Array(dieAmount).keys()]
     const [dice, setDice] = useState(dieArr.map(die => ({rollResult:null, dieMaxValue:dieMaxValue})))
     const [resultSum, setResultSum] = useState(null)
+    const [userWinningNum, setUserWinningNum] = useState(winningNum)
 
     const rollDie = () => 
         setDice(prevDice => prevDice.map(die => (
@@ -19,13 +20,15 @@ function LuckyN({dieAmount=2, dieMaxValue=6, winningNum=10}) {
         console.log('rollSum', rollSum)
     }
 
-    useEffect(getResultSum, [dice, winningNum])
+    useEffect(getResultSum, [dice, userWinningNum])
 
     return (
         <>
-        <div>winningNum: {winningNum}</div>
+        <div>Which sum of roll results should win?
+            <input type="number" name="winningNum" id="winningNum" placeholder="winning number" value={userWinningNum} onChange={(e) => setUserWinningNum(+e.target.value)} />
+        </div>
         <div>resultSum: {resultSum}</div>
-        <div>{resultSum === winningNum && 'Game Won!'}</div>
+        <div>{resultSum === userWinningNum && 'Game Won!'}</div>
         <Dice {...{dice}} />
         <button type="button" onClick={rollDie}>roll die</button>
         </>
