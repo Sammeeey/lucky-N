@@ -1,10 +1,11 @@
 // import './Die.css'
 
 function Die({dice, dieIdx}) {
+    console.log(dice)
 
     return (
         <>
-        Die max value={dice[dieIdx].dieMaxValue}
+        Die{dieIdx}: {dice[dieIdx].rollResult}
         </>
     )
 }
