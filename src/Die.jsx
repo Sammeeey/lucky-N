@@ -1,8 +1,6 @@
 // import './Die.css'
 
 function Die({dice, dieIdx}) {
-    console.log(dice)
-    console.log(dieIdx)
 
     return (
         <>
